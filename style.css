@@ -1,0 +1,86 @@
+* {
+    margin : 0;
+    padding : 0;
+    /* overflow: hidden; */
+}
+
+.game {
+    width : 600px;
+    height : 900px;
+    margin : auto;
+    background-color : #000;
+    border: 1px solid #fff;
+}
+
+.road {
+    width : 600px;
+    height : 900px;
+    background-color : #000;
+    background-image: url("images/road.jpg");
+    background-position-y: 0px;
+    background-size: contain;
+    border: 1px solid #fff;
+    position:absolute;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.obstacle {
+    position: absolute;
+    left : 160px;
+    height : 150px;
+    width : 82px;
+    top : -150px;
+    /* background-color: bisque; */
+    background-image: url("./images/car2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.speed {
+    font-size: 25px;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+}
+
+.score {
+    top:30px;
+    font-size: 25px;
+    font-style: italic;
+    color: #fff;
+    position: absolute;
+}
+
+.car {
+    width : 82px;
+    /* width: auto; */
+    height : 150px;
+    position: absolute;
+    background-image: url("images/car.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+
+    top : 700px;
+    left : 160px;
+
+}
+
+@keyframes moveRight {
+    0% {
+        left: 160px;
+    }
+    100% {
+        left: 360px;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        left: 360px;
+    }
+    100% {
+        left: 160px;
+    }
+}
